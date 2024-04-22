@@ -6,6 +6,6 @@
 
 </script>
 
-<a href={href} class={`py-1 px-3 bg-orange inline-block text-white no-underline font-roboto md:text-lg ${additionalStyles}`} target={newTab ? '__blank' : ''}> 
+<a href={href} class={`py-1 px-3 bg-orange inline-block text-white no-underline font-roboto md:text-lg ${additionalStyles}`} target={newTab ? '__blank' : ''} data-txt> 
     <slot />
 </a>

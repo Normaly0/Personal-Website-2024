@@ -1,6 +1,9 @@
 <script lang="ts">
 
+    import { onMount } from 'svelte';
+
     import { PortableText } from '@portabletext/svelte';
+    import { gsap } from "gsap";
 
     import type { Project } from "$lib/types/types";
     import {urlFor} from "$lib/sanity";
@@ -11,6 +14,17 @@
 
     export let data : { props: Project };
 
+    //Animations
+
+    onMount(() => {
+        
+        gsap.fromTo('main', {x: -35}, {
+            x: 0,
+            autoAlpha: 1,
+        })
+
+    })
+
 </script>
 
 <svelte:head>
@@ -20,7 +34,7 @@
 
 </svelte:head>
 
-<main>
+<main class="invisible">
 
     <section>
 
