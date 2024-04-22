@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+    @font-face {
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-display: swap;    
+        src: url(./fonts/Raleway-Regular.ttf) format('truetype');
+    }
+    
+    @font-face {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-display: swap;    
+        src: url(./fonts/Roboto-Bold.ttf) format('truetype');
+    }
+    
+    
+    :root {
+        font-size: 16px;
+
+        @media (min-width: 800px) {
+            font-size: 18px;
+        }
+    }
+    
+    body {
+        @apply p-5;
+        @apply font-raleway;
+        @apply text-ash;
+        @apply bg-background;
+
+        @apply md:py-14;
+    }
+    
+    main {
+        @apply max-w-[1200px];
+        @apply mx-auto;
+    }
+
+    section {
+        @apply my-8;
+        @apply md:my-14;
+    }
+
+    section:first-of-type {
+        @apply mt-0;
+    }
+
+    section:last-of-type {
+        @apply mb-0;
+    }
+    
+    h1 {
+        @apply font-roboto;
+        @apply text-4xl;
+        @apply text-orange;
+
+        @apply md:text-5xl;
+    }
+    
+    h2 {
+        @apply font-roboto;
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply font-roboto;
+        @apply text-2xl;
+        @apply mb-2;
+    }
+
+    p {
+
+    }
+
+    a {
+        @apply text-orange;
+        @apply underline;
+    }
+
+    ul, ol {
+        @apply pl-5;
+    }
+
+    li {
+        @apply list-disc;
+    }
+
+    button {
+        @apply font-roboto;
+    }
+
+}
