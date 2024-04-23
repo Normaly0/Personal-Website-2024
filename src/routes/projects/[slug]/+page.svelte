@@ -43,7 +43,15 @@
         </h1>
 
         <div class="relative w-full h-[200px] mb-7 md:mb-10 md:h-[350px] lg:h-[400px]  xl:h-[450px]">
-            <img src={urlFor(data.props.image.asset._ref).url()} alt={data.props.name} width="300" height="175" class="w-full h-full object-cover"/>
+            <img 
+                src={urlFor(data.props.image.asset._ref).url()} 
+                alt={data.props.name} 
+                width="300" 
+                height="175" 
+                fetchpriority="high"
+                loading="eager"
+                class="w-full h-full object-cover"
+            />
         </div>
 
         <TextContent>

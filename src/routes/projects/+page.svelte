@@ -83,7 +83,7 @@
 
             {#each clientProjects as project}
 
-                <ProjectCard project={project} />
+                <ProjectCard project={project} loadPriority={true}/>
 
             {/each}
 
